@@ -30,6 +30,7 @@ def delete_contact(contact: dict) -> None:
     refresh_contacts()
 
 
+
 with ui.row().classes('gap-4'):
     name = ui.input('Name')
     email = ui.input('Email')
