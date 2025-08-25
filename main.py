@@ -29,18 +29,6 @@ def delete_contact(contact: dict) -> None:
     contacts.remove(contact)
     refresh_contacts()
 
-def clear_contacts() -> None:
-    """Remove all contacts and refresh display."""
-    contacts.clear()
-    refresh_contacts()
-
-with ui.header().classes('items-center justify-between'):
-    ui.label('Contact Manager')
-    menu = ui.menu()
-    with menu:
-        ui.menu_item('Clear All', on_click=clear_contacts)
-        ui.menu_item('About', on_click=lambda: ui.notify('Simple contact manager'))
-    ui.button('Menu', on_click=menu.open)
 
 
 with ui.row().classes('gap-4'):
